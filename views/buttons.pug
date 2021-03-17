@@ -12,14 +12,14 @@ block content
   .prism
     pre
       code.language-pug
-        | +btn-primary() Primary
-        | +btn-secondary() Secondary
-        | +btn-success() Success
-        | +btn-danger() Danger
-        | +btn-warning() Warning
-        | +btn-info() Info
-        | +btn-light() Light
-        | +btn-dark() Dark
+        | +btn('primary') Primary
+        | +btn('secondary') Secondary
+        | +btn('success') Success
+        | +btn('danger') Danger
+        | +btn('warning') Warning
+        | +btn('info') Info
+        | +btn('light') Light
+        | +btn('dark') Dark
 
   .bd-example
     +btn-primary()(aria-label="primary") Primary
@@ -42,3 +42,11 @@ block content
         | +btn-info() Info
         | +btn-light() Light
         | +btn-dark() Dark
+  h3 Large Buttons
+  .bd-example
+    each bt in buttonTypes
+      +btn-lg(bt) #{bt}
+  h3 Small Buttons
+  .bd-example
+    each bt in buttonTypes
+      +btn-sm(bt) #{bt}
