@@ -46,7 +46,46 @@ block content
   .bd-example
     each bt in buttonTypes
       +btn-lg(bt) #{bt}
+  .prism
+    pre
+      code.language-pug
+        | +btn-lg('primary') Primary
+        | +btn-lg('secondary') Secondary
+        | +btn-lg('success') Success
+        | +btn-lg('danger') Danger
+        | +btn-lg('warning') Warning
+        | +btn-lg('info') Info
+        | +btn-lg('light') Light
+        | +btn-lg('dark') Dark
   h3 Small Buttons
   .bd-example
     each bt in buttonTypes
       +btn-sm(bt) #{bt}
+
+  .prism
+    pre
+      code.language-pug
+        | +btn-sm('primary') Primary
+        | +btn-sm('secondary') Secondary
+        | +btn-sm('success') Success
+        | +btn-sm('danger') Danger
+        | +btn-sm('warning') Warning
+        | +btn-sm('info') Info
+        | +btn-sm('light') Light
+        | +btn-sm('dark') Dark
+
+  h3 Outline Buttons
+  .bd-example
+    each bt in buttonTypes
+      +btn-outline(bt) #{bt}
+  .prism
+    pre
+      code.language-pug
+        | +btn-outline('primary') Primary
+        | +btn-outline('secondary') Secondary
+        | +btn-outline('success') Success
+        | +btn-outline('danger') Danger
+        | +btn-outline('warning') Warning
+        | +btn-outline('info') Info
+        | +btn-outline('light') Light
+        | +btn-outline('dark') Dark

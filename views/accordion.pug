@@ -10,3 +10,15 @@ block content
       |  This is second accordion content
     +accordion-item("Title3","sample")
       |  This is third accordion content
+
+  h4 Code
+  .prism
+    pre
+      code.language-pug
+        | +accordion("sample")
+        |   +accordion-item("Title1","sample","true")
+        |     p This is first accordion content
+        |   +accordion-item("Title2","sample")
+        |     p This is second accordion content
+        |   +accordion-item("Title3","sample")
+        |     p This is third accordion content
