@@ -32,29 +32,58 @@ block content
         | +alert('primary')
         |   | A simple primary alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('secondary')
-        |   | A simple secondary alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple secondary alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('success')
-        |   | A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple success alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('danger')
-        |   | A simple danger alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple danger alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('warning')
-        |   | A simple warning alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple warning alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('info')
-        |   | A simple info alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple info alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('light')
-        |   | A simple light alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple light alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
         | +alert('dark')
-        |   | A simple dark alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+        |   | A simple dark alert with &lt;a href="#" class="alert-link">an example link&lt;/a>. Give it a click if you like.
 
   h2 Additional Content
   +alert('success')
-    <h4 class="alert-heading">Well done!</h4>
-    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.</p>
-    <hr>
-    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+    h4.alert-heading Well done!
+    p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+    hr
+    p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
+
+  .prism
+    pre
+      code.language-pug
+        | +alert('success')
+        |   h4.alert-heading Well done!
+        |   p Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so that you can see how spacing within an alert works with this kind of content.
+        |   hr
+        |   p.mb-0 Whenever you need to, be sure to use margin utilities to keep things nice and tidy.
 
   h2 Dismissible alerts
   each alert_type in alertTypes
     +alert-x(alert_type)
       | <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+
+  .prism
+    pre
+      code.language-pug
+        | +alert-x('primary')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('secondary')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('success')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('danger')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('warning')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('info')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('light')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
+        | +alert-x('success')
+        |   | &lt;strong>Holy guacamole!&lt;/strong> You should check in on some of those fields below.
 

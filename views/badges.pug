@@ -1,8 +1,10 @@
 extends layout
 include components/badges
+include mixins
 
 block content
   h2 Badges - Simple
+  hr
   - var types = ['primary','secondary','success','danger','warning','info','light','dark']
 
   h1 Example heading #[+badge('secondary','New')]
@@ -12,17 +14,63 @@ block content
   h5 Example heading #[+badge('secondary','New')]
   h6 Example heading #[+badge('secondary','New')]
 
+  +prism
+    | h1 Example heading \#[+badge('primary','New')]
+    | h2 Example heading \#[+badge('secondary','New')]
+    | h3 Example heading \#[+badge('success','New')]
+    | h4 Example heading \#[+badge('danger','New')]
+    | h5 Example heading \#[+badge('warning','New')]
+    | h6 Example heading \#[+badge('info','New')]
+    | h1 Example heading \#[+badge('light','New')]
+    | h1 Example heading \#[+badge('dark','New')]
+
   p Badges can be used as part of links or buttons to provide a counter
   button.btn.btn-primary(type="button") Notifications #[+badge('light',"4")]
 
+  +prism
+    | button.btn.btn-primary(type="button") Notifications \#[+badge('light',"4")]
+
   h2 Contextual variations
-  each type in types
-    +badge(type,type)
+  .bd-example
+    each type in types
+      +badge(type,type)
+
+  +prism
+    | +badge('primary','primary')
+    | +badge('secondary','secondary')
+    | +badge('success','success')
+    | +badge('danger','danger')
+    | +badge('warning','warning')
+    | +badge('info','info')
+    | +badge('light','light')
+    | +badge('dark','dark')
 
   h2 Pill badges
-  each type in types
-    +badge-pill(type, type)
+  .bd-example
+    each type in types
+      +badge-pill(type, type)
+
+  +prism
+    | +badge-pill('primary','primary')
+    | +badge-pill('secondary','secondary')
+    | +badge-pill('success','success')
+    | +badge-pill('danger','danger')
+    | +badge-pill('warning','warning')
+    | +badge-pill('info','info')
+    | +badge-pill('light','light')
+    | +badge-pill('dark','dark')
 
   h2 Links
-  each type in types
-    a.badge(href="#", class='badge-' + type) #{type}
+  .bd-example
+    each type in types
+      a.badge(href="#", class='badge-' + type) #{type}
+
+  +prism
+    | a.badge(href="#", class="badge-primary") primary
+    | a.badge(href="#", class="badge-secondary") secondary
+    | a.badge(href="#", class="badge-success") success
+    | a.badge(href="#", class="badge-danger") danger
+    | a.badge(href="#", class="badge-warning") warning
+    | a.badge(href="#", class="badge-info") info
+    | a.badge(href="#", class="badge-light") light
+    | a.badge(href="#", class="badge-dark") dark

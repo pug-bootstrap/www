@@ -1,5 +1,6 @@
 extends layout
 include components/breadcrumb
+include mixins
 
 block content
   h2 Breadcrumb
@@ -7,10 +8,20 @@ block content
   +breadcrumb()
     li.breadcrumb-item.active(aria-current="page") Home
 
+  +prism
+    | +breadcrumb()
+    |   li.breadcrumb-item.active(aria-current="page") Home
+
   +breadcrumb()
     li.breadcrumb-item
       a(href="#") Home
     li.breadcrumb-item.active(aria-current="page") Library
+
+  +prism
+    | +breadcrumb()
+    |   li.breadcrumb-item
+    |     a(href="#") Home
+    |   li.breadcrumb-item.active(aria-current="page") Library
 
   +breadcrumb()
     li.breadcrumb-item
@@ -18,3 +29,11 @@ block content
     li.breadcrumb-item
       a(href="#") Library
     li.breadcrumb-item.active(aria-current="page") Data
+
+  +prism
+    | +breadcrumb()
+    |   li.breadcrumb-item
+    |     a(href="#") Home
+    |   li.breadcrumb-item
+    |     a(href="#") Library
+    |   li.breadcrumb-item.active(aria-current="page") Data
