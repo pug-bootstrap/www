@@ -1,0 +1,231 @@
+extends layout
+include components/dropdowns
+include mixins
+
+block content
+  h2 Dropdowns
+  hr
+  h3 Single button
+  +dropdown('Dropdown-button', 'secondary')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+
+  +prism
+    | +dropdown('Dropdown-button', 'secondary')
+    |   li
+    |     a.dropdown-item(href='#') Action
+    |   li
+    |     a.dropdown-item(href='#') Another action
+    |   li
+    |     a.dropdown-item(href='#') Something else here
+
+  h3 With <a> elements
+  +dropdown-link('Dropdown-link', 'primary')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+
+  +prism
+    | +dropdown-link('Dropdown-link', 'primary')
+    |   li
+    |     a.dropdown-item(href='#') Action
+    |   li
+    |     a.dropdown-item(href='#') Another action
+    |   li
+    |     a.dropdown-item(href='#') Something else here
+
+  h3 With button variants
+
+  +dropdown('Primary', 'primary')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Secondary', 'secondary')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Success', 'success')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Danger', 'danger')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Warning', 'warning')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Info', 'info')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Light', 'light')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+  +dropdown('Dark', 'dark')
+    li
+      a.dropdown-item(href='#') Action
+    li
+      a.dropdown-item(href='#') Another action
+    li
+      a.dropdown-item(href='#') Something else here
+
+  +prism
+    | +dropdown('Primary', 'primary')
+    |   li
+    |     a.dropdown-item(href='#') Action
+    |   li
+    |     a.dropdown-item(href='#') Another action
+    |   li
+    |     a.dropdown-item(href='#') Something else here
+
+
+  h3 Button dropdowns
+  .bd-example
+    +dropdown-btn('Primary', 'primary')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Secondary', 'secondary')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Success', 'success')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Danger', 'danger')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Warning', 'warning')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Info', 'info')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Light', 'light')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+    +dropdown-btn('Dark', 'dark')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+
+  +prism
+    | +dropdown-btn('Dark', 'dark')
+    |   a.dropdown-item(href='#') Action
+    |   a.dropdown-item(href='#') Another action
+    |   a.dropdown-item(href='#') Something else here
+    |   .dropdown-divider
+    |   a.dropdown-item(href='#') Separated link
+
+  h3 Split buttons
+  +dropdown-split('Primary','primary')
+    a.dropdown-item(href='#') Action
+    a.dropdown-item(href='#') Another action
+    a.dropdown-item(href='#') Something else here
+    .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+
+  h3 Large & small buttons
+
+  .bd-example
+    +dropdown-btn-lg('Large-Button', 'dark')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+
+    +dropdown-btn-sm('Small-Button', 'dark')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+        a.dropdown-item(href='#') Separated link
+
+  h3 Large & small split buttons
+  .bd-example
+    +dropdown-split-lg('Large-split-button','primary')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+        a.dropdown-item(href='#') Separated link
+    +dropdown-split-sm('Small-split-button','primary')
+      a.dropdown-item(href='#') Action
+      a.dropdown-item(href='#') Another action
+      a.dropdown-item(href='#') Something else here
+      .dropdown-divider
+        a.dropdown-item(href='#') Separated link
+  h3 Dropups
+  +dropup-btn('Dropup', 'dark')
+    a.dropdown-item(href='#') Action
+    a.dropdown-item(href='#') Another action
+    a.dropdown-item(href='#') Something else here
+    .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+  h3 Dropright
+  +dropright-btn('Dropup', 'dark')
+    a.dropdown-item(href='#') Action
+    a.dropdown-item(href='#') Another action
+    a.dropdown-item(href='#') Something else here
+    .dropdown-divider
+      a.dropdown-item(href='#') Separated link
+  h3 Dropleft
+  +dropleft-btn('Dropup', 'dark')
+    a.dropdown-item(href='#') Action
+    a.dropdown-item(href='#') Another action
+    a.dropdown-item(href='#') Something else here
+    .dropdown-divider
+      a.dropdown-item(href='#') Separated link

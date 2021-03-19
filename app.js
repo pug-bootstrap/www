@@ -35,6 +35,7 @@ app.use('/breadcrumb', breadcrumbRouter);
 app.use('/card', cardRouter);
 app.use('/buttons', (req, res) => res.render('buttons', { title: 'pug-bootstrap : Buttons' }));
 app.use('/carousel', (req, res) => res.render('carousel', { title: 'pug-bootstrap : Carousel' }));
+app.use('/dropdowns', (req, res) => res.render('dropdowns', { title: 'pug-bootstrap : Dropdowns' }));
 
 
 // catch 404 and forward to error handler
