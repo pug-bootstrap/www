@@ -1,0 +1,93 @@
+extends layout
+include components/tabs
+include mixins
+
+block content
+  h2 Tabs
+
+  +tab-list(["Home","Profile","Messages","Settings"],0)
+    +tab("Home",true)
+      h1 Home
+      p This is Home tab
+    +tab("Profile")
+      h1 Profile
+      p This is Profile tab
+    +tab("Messages")
+      h1 Messages
+      p This is Messages tab
+    +tab("Settings")
+      h1 Settings
+      p This is Settings tab
+  +prism
+    | +tab-list(["Home","Profile","Messages","Settings"],0)
+    |   +tab("Home","active")
+    |     h1 Home
+    |     p This is Home tab
+    |   +tab("Profile")
+    |     h1 Profile
+    |     p This is Profile tab
+    |   +tab("Messages")
+    |     h1 Messages
+    |     p This is Messages tab
+    |   +tab("Settings")
+    |     h1 Settings
+    |     p This is Settings tab
+
+  h3 Tabs with pills
+  +tab-pills(["Home","Profile","Messages","Settings"],0)
+    +tab-pill("Home","active")
+      h1 Home
+      p This is Home tab
+    +tab-pill("Profile")
+      h1 Profile
+      p This is Profile tab
+    +tab-pill("Messages")
+      h1 Messages
+      p This is Messages tab
+    +tab-pill("Settings")
+      h1 Settings
+      p This is Settings tab
+  +prism
+    | +tab-pills(["Home","Profile","Messages","Settings"],0)
+    |   +tab-pill("Home","active")
+    |     h1 Home
+    |     p This is Home tab
+    |   +tab-pill("Profile")
+    |     h1 Profile
+    |     p This is Profile tab
+    |   +tab-pill("Messages")
+    |     h1 Messages
+    |     p This is Messages tab
+    |   +tab-pill("Settings")
+    |     h1 Settings
+    |     p This is Settings tab
+
+  h3 Tabs with vertical pills
+  +tab-pills-vertical(["Home","Profile","Messages","Settings"],0, 'col-3','col-9')
+    +tab-v-pill("Home","active")
+      h1 Home
+      p This is Home tab
+    +tab-v-pill("Profile")
+      h1 Profile
+      p This is Profile tab
+    +tab-v-pill("Messages")
+      h1 Messages
+      p This is Messages tab
+    +tab-v-pill("Settings")
+      h1 Settings
+      p This is Settings tab
+  +prism
+    | +tab-pills-vertical(["Home","Profile","Messages","Settings"],0, 'col-3', 'col-9')
+    |   +tab-v-pill("Home","active")
+    |     h1 Home
+    |     p This is Home tab
+    |   +tab-v-pill("Profile")
+    |     h1 Profile
+    |     p This is Profile tab
+    |   +tab-v-pill("Messages")
+    |     h1 Messages
+    |     p This is Messages tab
+    |   +tab-v-pill("Settings")
+    |     h1 Settings
+    |     p This is Settings tab
+
