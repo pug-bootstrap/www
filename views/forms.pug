@@ -1,0 +1,17 @@
+extends layout
+include components/forms
+include mixins
+
+block content
+  h2 Forms
+
+  +input("text","txtName","Name","Name")
+  +checkbox(id="chkTest") My Check box
+  +radio("My Radio Button")
+  +submit("Register")
+  +input-group("$","%")
+    +input-simple("text","txtName","Name","Name")
+  +input-group("$")
+    +input-simple("text","txtName","Name","Name")
+  +input-group("","%")
+    +input-simple("text","txtName","Name","Name")

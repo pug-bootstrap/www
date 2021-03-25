@@ -37,6 +37,7 @@ app.use('/buttons', (req, res) => res.render('buttons', { title: 'pug-bootstrap 
 app.use('/carousel', (req, res) => res.render('carousel', { title: 'pug-bootstrap : Carousel' }));
 app.use('/dropdowns', (req, res) => res.render('dropdowns', { title: 'pug-bootstrap : Dropdowns' }));
 app.use('/tabs', (req, res) => res.render('tabs', { title: 'pug-bootstrap : Tabs' }));
+app.use('/forms', (req, res) => res.render('forms', { title: 'pug-bootstrap : Forms' }));
 
 
 // catch 404 and forward to error handler

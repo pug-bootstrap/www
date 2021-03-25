@@ -7,7 +7,7 @@
     "dev": "nodemon ./bin/www"
   },
   "dependencies": {
-    "@pug-bootstrap/components": "^0.0.10",
+    "@pug-bootstrap/components": "^0.0.11",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "express": "~4.16.1",
