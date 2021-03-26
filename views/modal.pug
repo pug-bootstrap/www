@@ -1,0 +1,15 @@
+extends layout
+include components/modal
+include mixins
+
+block content
+  h2 Modal
+  h3
+  button.btn.btn-primary(data-toggle="modal",data-target="#myModal") Launch demo modal
+  +modal("Modal title","myModal")
+    p This is modal content
+  +prism()
+    | button.btn.btn-primary(data-toggle="modal",data-target="#myModal") Launch demo modal
+    | +modal("Modal title","myModal")
+    |   p This is modal content
+

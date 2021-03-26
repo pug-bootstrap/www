@@ -1,0 +1,30 @@
+extends layout
+include components/list-groups
+include mixins
+
+block content
+  h2 List Groups
+  hr
+  h3 Simple list groups
+  +list-group(["Cras justo odio","Cras justo odio","Cras justo odio","Cras justo odio","Cras justo odio"])
+
+  h3 List group with links
+  +list-group-links([{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},{text:"Cras justo odio",url:"#"},],0)
+
+  h3 Custom List group
+  +list-group-custom()
+    +list-group-item("#","true")
+      h4.list-group-item-heading List group item heading
+      p.list-group-item-text
+        | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
+    +list-group-item("#")
+      h4.list-group-item-heading List group item heading
+      p.list-group-item-text
+        | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+
+    +list-group-item("#")
+      h4.list-group-item-heading List group item heading
+      p.list-group-item-text
+        | Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit.
+

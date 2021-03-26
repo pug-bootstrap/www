@@ -38,6 +38,9 @@ app.use('/carousel', (req, res) => res.render('carousel', { title: 'pug-bootstra
 app.use('/dropdowns', (req, res) => res.render('dropdowns', { title: 'pug-bootstrap : Dropdowns' }));
 app.use('/tabs', (req, res) => res.render('tabs', { title: 'pug-bootstrap : Tabs' }));
 app.use('/forms', (req, res) => res.render('forms', { title: 'pug-bootstrap : Forms' }));
+app.use('/list-groups', (req, res) => res.render('list-groups', { title: 'pug-bootstrap : List groups' }));
+app.use('/modal', (req, res) => res.render('modal', { title: 'pug-bootstrap : Modal' }));
+app.use('/navbar', (req, res) => res.render('navbar', { title: 'pug-bootstrap : Navbar' }));
 
 
 // catch 404 and forward to error handler
