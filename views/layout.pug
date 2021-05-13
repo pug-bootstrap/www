@@ -1,3 +1,4 @@
+include components/navbar
 doctype html
 html
   head
@@ -9,10 +10,21 @@ html
       link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous")
 
   body
-    nav.navbar.navbar-dark.sticky-top.bg-dark.flex-md-nowrap.p-0.shadow
+    nav.navbar.navbar-dark.sticky-top.bg-dark.flex-md-nowrap.p-0.shadow.navbar-expand-lg
       a.navbar-brand.col-md-3.col-lg-2.mr-0.px-3(href="/") pug-bootstrap
-      button.navbar-toggler.position-absolute.d-md-none.collapsed(type="button" data-toggle="collapse" data-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation")
-        span.navbar-toggler-icon
+      +navbar-toggler('navbarMain')
+
+      #navbarMain.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+          li.nav-item
+            a.nav-link(href='https://github.com/pug-bootstrap/components')
+              | Github 
+          li.nav-item
+            a.nav-link(href='https://getbootstrap.com') Bootstrap
+        form.form-inline.my-2.my-lg-0
+          input.form-control.mr-sm-2(type='search' placeholder='Search' aria-label='Search')
+          button.btn.btn-outline-light.my-2.my-sm-0(type='submit') Search
+
     .container-fluid
       .row
         include includes/sidebar.pug
